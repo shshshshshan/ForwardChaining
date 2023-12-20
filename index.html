@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Activity 2</title>
+  <link rel="stylesheet" href="./src/css/style.css">
+</head>
+
+<body>
+  <header class="main-header | fw-bold margin-bottom-600 padding-block-400">
+    <div class="container">
+      <h1 class="heading-text primary-heading">
+        Rule-based Expert System Operating on Forward-Chaining Reasoning Method
+      </h1>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <div class="card-container">
+        <div class="facts card">
+          <div class="card-content">
+            <h2 class="secondary-heading | fw-bold">Facts</h2>
+            <div class="card-body">
+              <div class="no-content">
+                <i class="fs-italic">No facts created yet</i>
+              </div>
+              <div class="facts-content">
+              </div>
+            </div>
+            <div class="card-footer">
+              <button class="btn" data-action="clear-facts">Clear</button>
+            </div>
+          </div>
+        </div>
+        <div class="rules card">
+          <div class="card-content">
+            <h2 class="secondary-heading | fw-bold">Rules</h2>
+            <div class="card-body">
+              <div class="no-content">
+                <i class="fs-italic">No rules created yet</i>
+              </div>
+              <div class="rules-content"></div>
+            </div>
+            <div class="card-footer">
+              <button class="btn" data-action="clear-rules">Clear</button>
+            </div>
+          </div>
+        </div>
+        <dialog class="modal">
+          <div class="close-btn-wrapper">
+            <button class="btn" data-action="close-modal">&times;</button>
+          </div>
+          <div class="tab-box" role="navigation">
+            <button class="tab-btn | fw-bold tab-active" aria-role="tab-button">Facts</button>
+            <button class="tab-btn | fw-bold" aria-role="tab-button">Rules</button>
+            <div class="line"></div>
+          </div>
+          <div class="content-box">
+            <div class="tab-content tab-active">
+              <div class="input-field fact-input">
+                <label for="fact-entry" class="fw-bold">Enter a fact</label>
+                <textarea name="fact-entry" id="fact-entry" cols="30" rows="3" placeholder="Enter fact here..."></textarea>
+                <button class="btn" data-action="add">Add</button>
+              </div>
+              <div class="hr-or">
+                <hr>
+                <span class="or">or</span>
+              </div>
+              <button class="btn" data-action="generate">Generate based on rules</button>
+            </div>
+            <div class="tab-content">
+              <div class="input-field rule-input">
+                <label for="rule-entry" class="fw-bold">Enter a rule</label>
+                <textarea name="rule-entry" id="rule-entry" cols="30" rows="3" placeholder="Enter rule here..."></textarea>
+                <button class="btn" data-action="add">Add</button>
+              </div>
+            </div>
+          </div>
+        </dialog>
+      </div>
+    </div>
+  </main>
+
+  <div class="add-button-wrapper">
+    <button class="btn colorful | fw-bold" data-action="add">&plus;</button>
+  </div>
+
+  <script type="module" src="./src/js/main.js"></script>
+</body>
+
+</html>
